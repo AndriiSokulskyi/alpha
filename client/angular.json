@@ -1,13 +1,19 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "9316dd92-c565-45d5-ab71-2b75c256a166"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "our-app": {
+    "alpha": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/our-app",
+            "outputPath": "dist/alpha",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,13 +56,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -65,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "our-app:build"
+            "browserTarget": "alpha:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "our-app:build:production"
+              "browserTarget": "alpha:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "our-app:build"
+            "browserTarget": "alpha:build"
           }
         },
         "test": {
@@ -113,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "our-app:serve"
+            "devServerTarget": "alpha:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "our-app:serve:production"
+              "devServerTarget": "alpha:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "our-app"
+  "defaultProject": "alpha"
 }
