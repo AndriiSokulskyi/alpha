@@ -10,5 +10,23 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+      let eye = document.querySelector(".show-password");
+      if(eye){ // ???
+        eye.addEventListener("click", function(){
+          let passwordInput = document.getElementById("pswInput");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eye.classList.remove("fa-eye");
+            eye.classList.add("fa-eye-slash"); 
+          } else {
+            passwordInput.type = "password";
+            eye.classList.add("fa-eye");
+            eye.classList.remove("fa-eye-slash"); 
+          }
+        })
+      }
+  </script>
 </body>
 </html>

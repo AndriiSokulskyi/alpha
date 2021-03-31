@@ -1,0 +1,19 @@
+<form class="login-form">
+  <div class="login-container">
+    <h1 class="login-title1">Вітаємо в Alpha!</h1>
+
+    <i class="fa fa-user"></i><label for="email"><b>Логін</b></label>
+    <input type="text" placeholder="Ваш Логін" name="email" required>
+    
+    <i class="fa fa-unlock-alt"></i><label for="psw"><b>Пароль</b></label>
+    <input type="password" placeholder="Ваш пароль" name="psw" id="pswInput" required>
+    <i class="show-password fa fa-eye"></i>
+
+
+    <button type="submit" class="btn" routerLink="/home-test">Увійти <i class="fa fa-check"></i></button>
+    <div class="buttons">
+      <a routerLink="/forgot-password" class="forgot-password">Забули пароль?</a>
+      <a routerLink="/signup" class="register">Реєстрація</a>
+    </div>
+  </div>
+</form>
