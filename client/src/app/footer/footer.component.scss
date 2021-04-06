@@ -1,0 +1,32 @@
+footer{
+    width: 100%;
+    height: auto;
+    background: #8B63F8;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+footer div{
+    margin-bottom: 12px;
+}
+footer a{
+    margin-left: 28px;
+    margin-right: 28px;
+}
+footer i{
+    font-size: 24px;
+    color: #160544; 
+}
+.footer_info{
+    color: black;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 28px;
+    margin-right: 28px;
+    text-decoration: none;
+}
+.footer_info:hover{
+    border-bottom: 1px solid #160544;
+    cursor: pointer;
+}
