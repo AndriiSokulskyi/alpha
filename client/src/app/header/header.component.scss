@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  box-sizing: border-box
+}
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background: #2C2C2C;
+}
+.logo{
+  display: flex;
+  .logo-img{
+  width: 100px;
+    img{
+      margin-top: 14px;
+      width: 100%;
+    }
+  }
+  .logo-title{
+    color: #E49EFE;
+    font-size: 36px;
+  }
+}
+.main-menu {
+	margin: 50px 0;
+  margin-right: 20px;
+}
+
+.main-menu ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+}
+.main-menu ul .menu-trigger{
+  background: transparent;
+}
+.main-menu ul li {
+	display:inline-block;
+	background-color: #E64A19;
+}
+
+.main-menu span {
+	display:block;
+	padding:0 20px;	
+	color:#ECF0F1;
+	font-size:24px;
+	line-height: 60px;
+	text-decoration:none;
+  cursor: pointer;
+}
+
+.main-menu span:hover { 
+	background-color: #000; 
+}
+
+/* Hide Dropdowns */
+.main-menu ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px;
+  right: 0;
+  padding-top: 10px;
+}
+	
+/* Display Dropdowns on Hover */
+.main-menu ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+.main-menu ul ul li {
+	width:220px;
+	float:none;
+	display:list-item;
+	position: relative;
+  background: #2c2c2c;
+  color: #ECF0F1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
