@@ -9,7 +9,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Add padding to container elements */
+.login-form{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .login-container {
   padding: 20px;
   width: 400px;
@@ -106,9 +111,9 @@ body{
     }
   }
   .form-control-feedback-login{
-    top: -35px;
+    top: -22px;
   }
   .form-control-feedback-password{
-    top: -58px;
+    top: -48px;
   }
 }

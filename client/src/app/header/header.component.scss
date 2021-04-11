@@ -19,6 +19,7 @@ body{
 }
 .logo{
   display: flex;
+  align-items: center;
   .logo-img{
   width: 100px;
     img{
@@ -29,6 +30,8 @@ body{
   .logo-title{
     color: #E49EFE;
     font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
   }
 }
 .main-menu {
