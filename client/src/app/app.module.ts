@@ -7,12 +7,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
