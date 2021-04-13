@@ -13,7 +13,7 @@ body{
 .registration-container {
   padding: 20px;
   width: 400px;
-  margin: 0 auto; 
+  margin: 50px auto; 
   .registration-title1{
     font-family: 'Noto Sans';
     font-weight: bold;
@@ -46,6 +46,9 @@ body{
     display: flex;
     justify-content: space-around;
   }
+  .floatBlock label{
+    cursor: pointer;
+  }
   input[type=radio]{
     font-family: 'Montserrat';
     font-size: 18px;
@@ -53,12 +56,13 @@ body{
     margin-right: 10px;
     width: auto;
     height: 13px;
+    cursor: pointer;
   }
   .buttons{
     display: flex;
     justify-content: space-between;
   }
-  button.btn{
+  .btn{
     border-radius: 6px;
     border: none;
     width: 150px;
@@ -71,12 +75,48 @@ body{
     padding: 5px;
     color: #ECF0F1;
     background: #D282F0;
+    cursor: pointer;
     i{
       font-size: 20px;
     }
   }
+  .btn:hover{
+    background: #B866D5;
+  }
   button[type=submit]{
     background: #8B63F8;
+  }
+  button[type=submit]:hover{
+    background: #774FE5;
+  }
+  i.show-password{
+    position: relative;
+    left: 88%;
+    font-weight: bold;
+    bottom: 60px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .has-danger input{
+    border: 2px solid #D63031;
+  }
+  .form-control-feedback-email, .form-control-feedback-password{
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 15px;
+    color: #D63031;
+    position: relative;
+    text-align: center;
+    .form-control-feedback:nth-child(2) {
+      margin: 0;
+    }
+  }
+  .form-control-feedback-email{
+    top: -22px;
+  }
+  .form-control-feedback-password{
+    top: -48px;
   }
 }
 

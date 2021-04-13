@@ -1,48 +1,120 @@
-<form class="registration-form">
+<form class="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()" novalidate>
   <div class="registration-container">
     <h1 class="registration-title1">Вас ще немає в Alpha?</h1>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Ваш Email" name="email" required>
-    
-    <label for="psw"><b>Пароль</b></label>
-    <input type="password" placeholder="Ваш пароль" name="psw" required>
+    <div class="form-group" [ngClass]="{
+      'has-danger': email.invalid && (email.dirty || email.touched),
+      'has-success': email.valid && (email.dirty || email.touched)
+    }">
+      <label for="emailInput"><b>Email</b></label>
+      <input type="email" placeholder="Ваш Email" id="emailInput" formControlName="email" required>
+    </div>
+    <div class="form-control-feedback-email"
+           *ngIf="email.errors && (email.dirty || email.touched)">
+      <p *ngIf="email.errors.required">Введіть Email!</p>
+      <p *ngIf="email.errors.pattern">Введіть Email правильно!</p>
+    </div>
 
-            <!-- <label for="email"><b>Phone Number</b></label>
-      <br>
-     <select name="phoneCode" required>
-      <option selected hidden value="">Code</option>
-      <option value="66">+98</option>
-      <option value="66">+99</option>
-      <option value="66">+90</option>
-      <option value="66">+66</option>
-     </select>
-     <input type="phone" name="phone" placeholder="812345678" required> -->
+    <div class="form-group" [ngClass]="{
+      'has-danger': password.invalid && (password.dirty || password.touched),
+      'has-success': password.valid && (password.dirty || password.touched)
+    }">
+      <label for="psw"><b>Пароль</b></label>
+      <input type="{{ status ? 'password' : 'text' }}"      placeholder="Ваш пароль"
+      id="pswInput"
+      formControlName="password" />
+      <i class="show-password fa" (click)="changeStatus()" 
+      [ngClass]="status ? 'fa-eye' : 'fa-eye-slash'"></i>
+    </div>
+    <div class="form-control-feedback-password"
+           *ngIf="password.errors && (password.dirty || password.touched)">
+        <p *ngIf="password.errors.required">Введіть пароль!</p>
+        <p *ngIf="password.errors.minlength">Пароль повинен містити {{password.errors.minlength.requiredLength}} символів </p>
+    </div>
 
-    <div class="registration-radio">
-      
-        <input type="radio" name="student" checked><label for="student">Ви учень</label>
-            
-        <input type="radio" name="teacher" ><label for="teacher">Ви вчитель</label>
-      
+    <div class="form-group" [ngClass]="{
+      'has-danger': user.invalid && (user.dirty || user.touched),
+      'has-success': user.valid && (user.dirty || user.touched)
+    }">
+      <div class="registration-radio">
+        <div class="floatBlock">
+          <label for="student"> 
+            <input id="student" type="radio" value="Учень" formControlName="user" checked/>Ви учень? 
+          </label>
+        </div>
+        <div class="floatBlock">
+          <label for="teacher"> 
+            <input id="teacher" type="radio" value="Вчитель" formControlName="user"/>Ви вчитель?
+          </label>
+        </div>
+      </div>
     </div>
     
-    <label for="surname"><b>Прізвище</b></label>
-    <input type="text" placeholder="Ваше прізвище" name="surname" required>
-    
-    <label for="user_name"><b>Ім'я</b></label>
-    <input type="text" placeholder="Як вас звати?" name="user_name" required>
+    <div class="form-group" [ngClass]="{
+      'has-danger': surname.invalid && (surname.dirty || surname.touched),
+      'has-success': surname.valid && (surname.dirty || surname.touched)
+    }">
+      <label for="surname"><b>Прізвище</b></label>
+      <input type="text" placeholder="Ваше прізвище" id="surname" formControlName="surname" required>
+    </div>
+    <div class="form-control-feedback-email"
+           *ngIf="surname.errors && (surname.dirty || surname.touched)">
+      <p *ngIf="surname.errors.required">Введіть ваше прізвище!</p>
+      <p *ngIf="surname.errors.minlength">Прізвище повинно містити хоча б {{surname.errors.minlength.requiredLength}} символи </p>
+      <p *ngIf="surname.errors.pattern">Введіть прізвище правильно!</p>
+    </div>
 
-    <label for="fathers_name"><b>По-батькові</b></label>
-    <input type="text" placeholder="Олексійович" name="fathers_name" required>
-    
-    <label for="bdate"><b>Дата народження</b></label>
-    <input type="date" name="bdate" required>
 
+    <div class="form-group" [ngClass]="{
+      'has-danger': user_name.invalid && (user_name.dirty || user_name.touched),
+      'has-success': user_name.valid && (user_name.dirty || user_name.touched)
+    }">
+      <label for="user_name"><b>Ім'я</b></label>
+      <input type="text" placeholder="Як вас звати?" id="user_name" formControlName="user_name" required>
+    </div>
+    <div class="form-control-feedback-email"
+           *ngIf="user_name.errors && (user_name.dirty || user_name.touched)">
+      <p *ngIf="user_name.errors.required">Введіть ваше ім'я!</p>
+      <p *ngIf="user_name.errors.minlength">Ім'я повинно містити хоча б {{user_name.errors.minlength.requiredLength}} символи </p>
+      <p *ngIf="user_name.errors.pattern">Введіть ім'я правильно!</p>
+    </div>
+
+    <div class="form-group" [ngClass]="{
+      'has-danger': father_name.invalid && (father_name.dirty || father_name.touched),
+      'has-success': father_name.valid && (father_name.dirty || father_name.touched)
+    }">
+      <label for="fathers_name"><b>По-батькові</b></label>
+      <input type="text" placeholder="Олексійович" id="fathers_name" formControlName="father_name" required>
+    </div>
+    <div class="form-control-feedback-email"
+           *ngIf="father_name.errors && (father_name.dirty || father_name.touched)">
+      <p *ngIf="father_name.errors.required">Як вас по-батькові?</p>
+      <p *ngIf="father_name.errors.minlength">По-батькові повинно містити хоча б {{father_name.errors.minlength.requiredLength}} символи </p>
+      <p *ngIf="father_name.errors.pattern">Введіть ваше по-батькові правильно!</p>
+    </div>
+    
+
+    <div class="form-group" [ngClass]="{
+      'has-danger': b_day.invalid && (b_day.dirty || b_day.touched),
+      'has-success': b_day.valid && (b_day.dirty || b_day.touched)
+    }">
+      <label for="bdate"><b>Дата народження</b></label>
+      <input type="date" name="bdate" 
+      min="1900-01-01" max="2018-01-01" 
+      formControlName="b_day"
+      required>
+    </div>
+    <div class="form-control-feedback-email"
+           *ngIf="b_day.errors && (b_day.dirty || b_day.touched)">
+      <p *ngIf="b_day.errors.required">Коли у вас день народження?</p>
+    </div>
 
     <div class="buttons">
-      <button class="btn">На головну <i class="fa fa-home"></i></button>
-      <button type="submit" class="btn">Готово <i class="fa fa-check"></i></button>
+      <button class="btn" routerLink="/">На головну <i class="fa fa-home"></i></button>
+      <button type="submit" class="btn" [disabled]="!registrationForm.valid">
+        Готово 
+        <i class="fa fa-check"></i>
+      </button>
     </div>
   </div>
 </form>

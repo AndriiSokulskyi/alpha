@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-* {
-  box-sizing: border-box
-}
-
-body{
-  font-family: 'Noto Sans', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-}
-
 .container{
   display: flex;
   justify-content: space-between;
@@ -19,6 +8,7 @@ body{
 }
 .logo{
   display: flex;
+  align-items: center;
   .logo-img{
   width: 100px;
     img{
@@ -29,6 +19,8 @@ body{
   .logo-title{
     color: #E49EFE;
     font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
   }
 }
 .main-menu {
@@ -89,4 +81,3 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
-
