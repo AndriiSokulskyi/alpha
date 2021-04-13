@@ -46,7 +46,7 @@ body{
     display: flex;
     justify-content: space-around;
   }
-  .floatBlock label{
+  .float-block label{
     cursor: pointer;
   }
   input[type=radio]{
@@ -101,7 +101,12 @@ body{
   .has-danger input{
     border: 2px solid #D63031;
   }
-  .form-control-feedback-email, .form-control-feedback-password{
+  .has-danger input[type=radio]{
+    color: red;
+  }
+  .form-control-feedback-email, 
+  .form-control-feedback-password,
+  .form-control-feedback-radio{
     font-family: 'Montserrat';
     font-size: 12px;
     line-height: 15px;
@@ -117,6 +122,27 @@ body{
   }
   .form-control-feedback-password{
     top: -48px;
+  }
+}
+@media screen and (max-width: 405px ) {
+  .registration-container{
+    width: auto;
+  }
+}
+@media screen and (max-width: 360px ){
+  .registration-radio{
+    justify-content: center;
+    flex-direction: column;
+    .float-block{
+      text-align: center;
+    }
+  }
+  .buttons{
+    flex-direction: column-reverse;
+    .btn{
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
 }
 

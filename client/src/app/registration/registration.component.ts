@@ -16,8 +16,10 @@ export class RegistrationComponent implements OnInit {
   user_name!: FormControl;
   father_name!: FormControl;
   b_day!: FormControl;
+  submitted!: boolean;
 
   status = true;
+  
   constructor() { 
 
   }
@@ -38,18 +40,17 @@ export class RegistrationComponent implements OnInit {
     this.surname = new FormControl("", [
       Validators.required,
       Validators.minLength(2),
-      Validators.pattern("[А-ЯЄIЇ][а-яєiї]{1,20}$")
-      // [А-Z][a-z]
+      Validators.pattern("[^:$#@^&*/><.,][^0-9]{1,20}")
     ])
     this.user_name = new FormControl("", [
       Validators.required,
       Validators.minLength(2),
-      Validators.pattern("[А-ЯЄI][а-яєi]{1,20}$")
+      Validators.pattern("[^:$#@^&*/><.,][^0-9]{1,20}")
     ])
     this.father_name = new FormControl("", [
       Validators.required,
       Validators.minLength(2),
-      Validators.pattern("[А-ЯЄI][а-яєi]{1,20}$")
+      Validators.pattern("[^:$#@^&*/><.,][^0-9]{1,20}")
     ])
     this.b_day = new FormControl("", [
       Validators.required
@@ -74,6 +75,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.submitted = true;
     if (this.registrationForm.valid) {
       console.log("Form Submitted!");
       console.log(this.registrationForm.value);

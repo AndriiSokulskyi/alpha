@@ -33,21 +33,25 @@
     </div>
 
     <div class="form-group" [ngClass]="{
-      'has-danger': user.invalid && (user.dirty || user.touched),
-      'has-success': user.valid && (user.dirty || user.touched)
+      'has-danger': user.invalid && (user.pristine || user.untouched),
+      'has-success': user.invalid && (user.pristine || user.untouched)
     }">
       <div class="registration-radio">
-        <div class="floatBlock">
+        <div class="float-block">
           <label for="student"> 
             <input id="student" type="radio" value="Учень" formControlName="user" checked/>Ви учень? 
           </label>
         </div>
-        <div class="floatBlock">
+        <div class="float-block">
           <label for="teacher"> 
             <input id="teacher" type="radio" value="Вчитель" formControlName="user"/>Ви вчитель?
           </label>
         </div>
       </div>
+    </div>
+    <div class="form-control-feedback-radio"
+           *ngIf="user.errors && (user.pristine || user.untouched)">
+           <p *ngIf="user.errors.required">Обов'язково виберіть хто ви!</p>
     </div>
     
     <div class="form-group" [ngClass]="{
