@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 
 
@@ -13,6 +14,7 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     HeaderComponent,
+    FooterComponent,
     LoginComponent
   ],
   imports: [
