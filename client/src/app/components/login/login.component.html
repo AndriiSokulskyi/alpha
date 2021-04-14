@@ -1,0 +1,46 @@
+<form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="login-container">
+    <h1 class="login-title1">Вітаємо в Alpha!</h1>
+
+    <div>
+      <div class="form-group" [ngClass]="{
+        'has-danger': login.invalid && (login.dirty || login.touched),
+        'has-success': login.valid && (login.dirty || login.touched)
+      }">
+        <i class="fa fa-user"></i><label for="loginInput"><b>Логін</b></label>
+        <input type="email" placeholder="Ваш Логін" id="loginInput" formControlName="login" required/>
+      </div>
+      <div class="form-control-feedback-login"
+           *ngIf="login.errors && (login.dirty || login.touched)">
+        <p *ngIf="login.errors.required">Введіть логін!</p>
+        <p *ngIf="login.errors.pattern">Введіть логін правильно!</p>
+          
+      </div>
+      <div class="form-group" [ngClass]="{
+        'has-danger': password.invalid && (password.dirty || password.touched),
+        'has-success': password.valid && (password.dirty || password.touched)
+      }">
+        <i class="fa fa-unlock-alt"></i><label for="pswInput"><b>Пароль</b></label>
+        <input type="{{ status ? 'password' : 'text' }}"      placeholder="Ваш пароль"
+               id="pswInput"
+               formControlName="password" />
+        <i class="show-password fa" (click)="changeStatus()" 
+          [ngClass]="status ? 'fa-eye' : 'fa-eye-slash'"></i>
+      </div>
+      <div class="form-control-feedback-password"
+           *ngIf="password.errors && (password.dirty || password.touched)">
+          <p *ngIf="password.errors.required">Введіть пароль!</p>
+          <p *ngIf="password.errors.minlength">Пароль повинен містити {{password.errors.minlength.requiredLength}} символів </p>
+      </div>
+    </div>
+    
+    <button type="submit" class="btn" [disabled]="!loginForm.valid">
+      Увійти 
+      <i class="fa fa-sign-in"></i>
+    </button>
+    <div class="buttons">
+      <span routerLink="/forgot-password" class="forgot-password">Забули пароль?</span>
+      <span routerLink="/signup" class="register">Реєстрація</span>
+    </div>
+  </div>
+</form>
