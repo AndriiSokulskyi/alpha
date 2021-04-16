@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
@@ -28,6 +29,8 @@ const routes = [
     ForgotPasswordComponent,
     AboutUsComponent,
     PoliticsComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
