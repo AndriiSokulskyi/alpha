@@ -5,7 +5,7 @@ body{
     font-family: 'Montserrat', sans-serif;
   }
 
-#help{
+h1{
     position: absolute;
     left: 157px;
     top: 90px;
@@ -22,14 +22,14 @@ body{
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-#pen{
+.pen{
     position: absolute;
     width: 39px;
     height: 58px;
     left: 859px;
     top: 110px;
 }
-#h2{
+h2{
     position: absolute;
     width: 863px;
     height: 58px;
@@ -54,7 +54,7 @@ body{
     left: 55.24%;
     top: 331px;
 }
-#map{
+.map{
     position: absolute;
     height: 498px;
     left: 10.9%;
@@ -77,16 +77,16 @@ body{
     border: 1px solid #000000;
     border-radius: 2px; 
 }
-#enter-fullname{
+.enter-fullname{
     position: absolute;
     height: 46.02px;
 }
-#enter-email{
+.enter-email{
     position: absolute;
     height: 46.02px;
     top: 15%;
 }
-#questions{
+.questions{
     position: absolute;
     height: 270px;
     top: 30%;
@@ -100,16 +100,16 @@ body{
     
     border-radius: 6px;
 }
-#send{
+.send{
     left: 0%;
     background: #EC63F8;
 }
-#back{
+.back{
     left: 50%; 
     background: #8B63F8;
 }
 
-#end-ofpage{
+.end-ofpage{
     top: 830px;
     height: 30px;
 }
