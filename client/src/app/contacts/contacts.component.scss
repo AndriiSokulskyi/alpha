@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+h1{
+    position: absolute;
+    left: 157px;
+    top: 90px;
+    width: 648px;
+    height: 87px;
+
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 87px;
+    text-align: center;
+
+    color: #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.pen{
+    position: absolute;
+    width: 39px;
+    height: 58px;
+    left: 859px;
+    top: 110px;
+}
+h2{
+    position: absolute;
+    width: 863px;
+    height: 58px;
+    left: 394px;
+    top: 224px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #000000;
+}
+.contact-form{
+    position: absolute;
+    width: 450.1px;
+    height: 450px;
+    left: 55.24%;
+    top: 331px;
+}
+.map{
+    position: absolute;
+    height: 498px;
+    left: 10.9%;
+    right: 53.54%;
+    top: 331px;
+}
+
+.box{
+    width: 405px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 500px;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #000000;
+        
+    mix-blend-mode: darken;
+    opacity: 0.6;
+    border: 1px solid #000000;
+    border-radius: 2px; 
+}
+.enter-fullname{
+    position: absolute;
+    height: 46.02px;
+}
+.enter-email{
+    position: absolute;
+    height: 46.02px;
+    top: 15%;
+}
+.questions{
+    position: absolute;
+    height: 270px;
+    top: 30%;
+}
+.buttons{
+    position: absolute;
+    width: 196px;
+    height: 46px;
+    top: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    border-radius: 6px;
+}
+.send{
+    left: 0%;
+    background: #EC63F8;
+}
+.back{
+    left: 50%; 
+    background: #8B63F8;
+}
+
+.end-ofpage{
+    top: 830px;
+    height: 30px;
+}
