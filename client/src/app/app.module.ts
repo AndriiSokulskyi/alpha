@@ -28,7 +28,7 @@ const routes = [
     ContactsComponent,
     ForgotPasswordComponent,
     AboutUsComponent,
-    PoliticsComponent
+    PoliticsComponent,
     FooterComponent,
     LoginComponent
   ],

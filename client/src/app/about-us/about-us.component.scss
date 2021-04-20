@@ -97,16 +97,15 @@ h3{
     border-radius: 2px;
 }
 .photo{
+    padding: 25px;
     width: 192px;
     height: 233px;
-    top: 10%;
-    left: 10%;
 }    
     .about-student{
         position: absolute;
+        padding-left: 25px;
         width: 271px;
         height: 134px;
-        left: 10%;
         top: 50%;
 
         font-family: 'Montserrat';
@@ -119,16 +118,16 @@ h3{
         color: #000000;
     }
 
-#first{
+.first{
     left: 35px;
 }
-#second{
+.second{
     left: 368px;
 }
-#third{
+.third{
     left: 705px;
 }
-#fourth{
+.fourth{
     left: 1040px;
 }
 .social-network{
@@ -139,4 +138,5 @@ h3{
     display:flex;
     justify-content: space-around;
     font-size: 24px;
+    padding-top: 3px;
 }
